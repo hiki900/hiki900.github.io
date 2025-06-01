@@ -1,0 +1,411 @@
+/* --- General Responsive Styles --- */
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevent extra space below images */
+}
+
+/* --- Tablet Styles (Example: max-width 1200px) --- */
+@media (max-width: 1200px) {
+  /* Adjust container widths, paddings, etc. */
+  /* Example: Reduce horizontal padding slightly */
+  body > div { /* Targetting top-level divs, adjust selector if needed */
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  /* Adjust layout for sections if needed */
+  #_1_113 { /* Section with 3 columns */
+     /* Adjust spacing or width if needed */
+     gap: 20px; /* Reduce gap if it's a flex/grid container */
+  }
+}
+
+/* --- Mobile Styles (Example: max-width 767px) --- */
+@media (max-width: 767px) {
+
+  /* Resetting potential fixed positioning and sizing from Figma export */
+  div[id^='_'], section[id^='_'], header[id^='_'], footer[id^='_'], nav[id^='_'] {
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 15px !important; /* Add some default padding */
+      display: block !important; /* Default to block display */
+  }
+
+  /* --- Header & Navigation --- */
+  #_1_34 { /* Header container */
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px !important;
+  }
+
+  #_1_37 { /* Logo container */
+     width: auto !important; /* Let it size by content */
+     padding: 0 !important;
+  }
+  #_1_37 img {
+     max-width: 150px; /* Control logo size */
+     height: auto;
+  }
+
+  #_1_40 { /* Navigation container */
+    display: none; /* Hide the default desktop menu */
+    /* In a real scenario, we'd add a hamburger button and JS */
+    /* Simple stacking for demonstration: */
+    /* display: block !important; */
+    /* position: absolute !important; */
+    /* top: 60px; */
+    /* left: 0 !important; */
+    /* background-color: #FFF; */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+    /* padding: 10px 0 !important; */
+    /* text-align: center; */
+  }
+  /* #menu-menu-clinica-estetica { */ /* The UL inside #_1_40 */
+      /* display: flex !important; */
+      /* flex-direction: column; */
+      /* align-items: center; */
+      /* list-style: none; padding: 0; margin: 0; */
+  /* } */
+  /* #menu-menu-clinica-estetica li { */
+      /* margin: 10px 0; */
+      /* width: 100%; */
+  /* } */
+  /* #menu-menu-clinica-estetica a { */
+      /* padding: 10px 20px !important; */
+      /* display: block; */
+      /* text-decoration: none; color: #333; */
+  /* } */
+
+  /* --- Hero Section --- */
+  #_1_86 { /* Hero section container */
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px !important;
+  }
+  #_1_87 { /* Text block */
+     order: 1; /* Ensure text comes first or second */
+     margin-bottom: 20px;
+     padding: 0 !important;
+  }
+   #_1_88, #_1_91, #_1_94 { /* Title parts */
+      font-size: 2em !important; /* Adjust font size */
+      line-height: 1.2 !important;
+   }
+   #_1_97 { /* Subtitle */
+      font-size: 1em !important;
+      margin-top: 10px;
+   }
+   #_1_98 { /* Button container */
+      display: flex !important; /* Use flex to center */
+      justify-content: center;
+      margin-top: 20px;
+      padding: 0 !important;
+   }
+   #_1_99 { /* The button itself */
+       padding: 10px 20px !important; /* Adjust padding */
+       font-size: 1em !important;
+   }
+
+  #_1_101 { /* Image block */
+     order: 2; /* Ensure image comes after text */
+     max-width: 400px; /* Limit image size */
+     padding: 0 !important;
+  }
+   #_1_101 img { /* The actual image */
+      width: 100%;
+   }
+
+
+  /* --- Three Column Section (_1_113) --- */
+  #_1_113 { /* Container for the three columns */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Space between items */
+    padding: 20px 15px !important;
+  }
+  #_1_114, #_1_118, #_1_122 { /* Individual column containers */
+    max-width: 350px;
+    text-align: center;
+    padding: 0 !important;
+  }
+  /* Adjust text sizes inside columns */
+  #_1_116, #_1_120, #_1_124 { font-size: 1.5em !important; margin-bottom: 10px; }
+  #_1_117, #_1_121, #_1_125 { font-size: 1em !important; line-height: 1.5; }
+
+
+  /* --- Sobre Mim Section (sobre-mim) --- */
+   #sobre-mim {
+      display: flex !important;
+      flex-direction: column;
+      padding: 20px 15px !important;
+   }
+   #_1_130 { /* Image container */
+      order: 1;
+      max-width: 400px;
+      margin-bottom: 20px;
+      padding: 0 !important;
+   }
+   #_1_131 { /* Text container */
+      order: 2;
+      text-align: center;
+      padding: 0 !important;
+   }
+   #_1_132, #_1_133 { /* Headings */
+      font-size: 1.8em !important;
+      margin-bottom: 10px;
+   }
+    #_1_134 { /* Paragraph */
+      font-size: 1em !important;
+      line-height: 1.6;
+   }
+
+  /* --- Stats Section (_1_164) --- */
+  #_1_164 { /* Container */
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 15px !important;
+  }
+  #_1_165, #_1_170, #_1_174 { /* Stat items */
+      text-align: center;
+      padding: 0 !important;
+  }
+  #_1_166, #_1_171, #_1_175 { /* Number */
+      font-size: 2.5em !important;
+      font-weight: bold;
+      display: block;
+  }
+  #_1_167, #_1_172, #_1_176 { /* Plus sign */
+      font-size: 1.5em !important;
+      font-weight: bold;
+  }
+  #_1_169, #_1_173, #_1_177 { /* Label */
+      font-size: 1em !important;
+      display: block;
+      margin-top: 5px;
+  }
+
+  /* --- Nossos Serviços Section (nossos-servicos) --- */
+  #nossos-servicos { padding: 20px 15px !important; }
+  #_1_179 { text-align: center; margin-bottom: 30px; padding: 0 !important; }
+  #_1_180 { font-size: 1.8em !important; display: block; margin-bottom: 5px; }
+  #_1_181 { font-size: 1.1em !important; display: block; color: #555; }
+
+  #_1_182 { /* Container for service cards */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 !important;
+  }
+  #_1_183, #_1_191, #_1_197, #_1_203 { /* Individual service cards */
+    max-width: 350px;
+    border: 1px solid #eee;
+    padding: 20px !important;
+    text-align: center;
+    background-color: #fff; /* Ensure background */
+  }
+  #_1_184, #_1_192, #_1_198, #_1_204 { /* Icon/image divs */
+     margin: 0 auto 15px auto;
+     width: 60px !important;
+     height: 60px !important;
+     /* Add background images/colors if they were divs */
+     background-color: #eee; /* Placeholder */
+     border-radius: 50%;
+     padding: 0 !important;
+  }
+   /* Adjust text sizes */
+   #_1_189, #_1_195, #_1_201, #_1_207 { /* Service title */
+       font-size: 1.2em !important;
+       margin-bottom: 10px;
+       font-weight: bold;
+   }
+   #_12_4, #_12_15, #_87_2, #_1_205 { /* Sub-text/button container */
+       margin-top: 10px;
+       padding: 0 !important;
+   }
+   #_12_5, #_12_16, #_87_3, #_1_206 { /* Sub-text/button */
+       font-size: 0.9em !important;
+       display: inline-block;
+       padding: 5px 10px !important;
+       background-color: #f0f0f0;
+       border-radius: 4px;
+   }
+
+  /* --- Testimonials Section (_1_208) --- */
+   #_1_208 { padding: 20px 15px !important; }
+   #_1_213 { text-align: center; margin-bottom: 30px; padding: 0 !important; }
+   #_1_214 { font-size: 1.8em !important; display: block; margin-bottom: 5px; }
+   #_1_215 { font-size: 1.1em !important; display: block; color: #555; }
+
+   #_1_216 { /* Testimonials container */
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 0 !important;
+   }
+   #_1_217, #_1_240 { /* Individual testimonials */
+      max-width: 400px;
+      padding: 20px !important;
+      border: 1px solid #eee;
+      text-align: center;
+      background-color: #fff;
+   }
+   /* Star ratings need specific styling if they are separate elements */
+   #_1_219, #_1_223, #_1_225, ... { /* Example for stars */
+       color: #FFD700; /* Gold color for stars */
+       font-size: 1.2em;
+       margin: 0 2px;
+   }
+   #_1_237, #_1_257 { /* Testimonial text */
+       font-size: 1em !important; 
+       line-height: 1.6;
+       margin: 15px 0;
+       display: block;
+    }
+   #_1_238, #_1_258 { /* Author */
+       font-size: 0.9em !important; 
+       font-style: italic; 
+       display: block;
+       margin-top: 10px;
+    }
+   #_98_5, #_124_27 { /* Images within testimonials */
+      max-width: 80px;
+      margin: 0 auto 15px auto;
+      border-radius: 50%;
+      padding: 0 !important;
+   }
+
+  /* --- Image/Video Section (_125_28) --- */
+  #_125_28 { /* Container for large image/video */
+      padding: 0 !important; /* Remove padding if it covers full width */
+      margin-top: 20px;
+  }
+  #_125_28 img {
+      width: 100%;
+  }
+
+  /* --- Contact Section (contato) --- */
+  #contato { padding: 20px 15px !important; }
+  #_1_261 { /* Container */
+     display: flex !important;
+     flex-direction: column;
+     text-align: center;
+     gap: 20px;
+     padding: 0 !important;
+  }
+   #_1_262 { /* Text block */
+      order: 1;
+      padding: 0 !important;
+   }
+   #_1_263 { font-size: 1.5em !important; text-transform: uppercase; display: block; margin-bottom: 5px; }
+   #_1_264 { font-size: 1em !important; line-height: 1.6; display: block; margin-bottom: 15px; }
+   #_1_266 { font-size: 1.8em !important; display: block; margin-bottom: 20px; }
+
+   #_1_268 { /* Button container */
+       order: 3;
+       padding: 0 !important;
+   }
+   #_1_269 { /* Button */
+       display: inline-flex !important; /* Align icon and text */
+       align-items: center;
+       padding: 12px 25px !important;
+       font-size: 1.1em !important;
+       text-decoration: none;
+       color: white;
+       background-color: #25D366; /* WhatsApp green */
+       border-radius: 5px;
+   }
+   #_1_270 { /* Icon */
+       margin-right: 8px;
+   }
+
+   #_1_273 { /* Image block */
+      order: 2;
+      max-width: 400px;
+      padding: 0 !important;
+   }
+
+
+  /* --- Footer (_1_274) --- */
+  #_1_274 {
+     display: flex !important;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     padding: 20px 15px !important;
+     margin-top: 30px;
+     border-top: 1px solid #eee;
+  }
+  #_1_275 { /* Logo container in footer */
+      padding: 0 !important;
+      margin-bottom: 15px;
+  }
+  #_1_275 img { max-width: 180px; }
+
+  #_1_276 { /* Text below logo */
+      font-size: 0.9em !important;
+      color: #555;
+      margin-bottom: 15px;
+  }
+
+  #_1_278 { /* Footer menu container */
+     margin-bottom: 15px;
+     padding: 0 !important;
+  }
+  #menu-menu-clinica-estetica-1 { /* Footer menu UL */
+     list-style: none; padding: 0; margin: 0;
+     display: flex !important;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+  }
+   #menu-menu-clinica-estetica-1 a {
+       text-decoration: none;
+       color: #333;
+       font-size: 1em !important;
+   }
+
+  #_1_296 { /* Footer button container */
+     margin-top: 15px;
+     padding: 0 !important;
+  }
+  #_1_297 { /* Footer button */
+      display: inline-flex !important;
+      align-items: center;
+      padding: 10px 20px !important;
+      font-size: 1em !important;
+      /* Style similarly to other buttons if needed */
+  }
+
+  /* Hide Figma watermark on mobile if desired */
+  a[href*="figma.to.website"] {
+      display: none !important;
+  }
+
+}
+
